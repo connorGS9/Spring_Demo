@@ -25,6 +25,7 @@ public class Student {
     private int age;
     private LocalDate dob;
 
+    //Getters and Setters for id, name, email, age, dob
     public String getName() {
         return name;
     }
@@ -42,7 +43,6 @@ public class Student {
     }
 
     public int getAge() {
-
         return Period.between(this.dob, LocalDate.now()).getYears();
     }
 
@@ -66,16 +66,15 @@ public class Student {
         this.email = email;
     }
 
-    public Student(String name, String email, LocalDate dob) {
-        this.id=id;
+    public Student(String name, String email, LocalDate dob) { //Student constructor {name, email, dob}
         this.name = name;
         this.email = email;
         this.dob = dob;
     }
 
-    public Student() {}
+    public Student() {} //Base student constructor
     @Override
-    public String toString() {
+    public String toString() { //To string method for viewing students
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
